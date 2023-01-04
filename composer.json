@@ -1,0 +1,36 @@
+{
+    "name": "astlaure/saphir",
+    "description": "Saphir Laravel Package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandre St-Laurent",
+            "email": "alexandre.stlaurent.4@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0.2"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Astlaure\\Saphir\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Astlaure\\Saphir\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Astlaure\\Saphir\\SaphirServiceProvider"
+            ]
+        }
+    }
+}
