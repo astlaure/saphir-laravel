@@ -1,6 +1,10 @@
 <?php
 
 return [
+    'admin' => [
+        'prefix' => '/admin',
+        'middleware' => ['web', 'auth'],
+    ],
     'auth' => [
         'prefix' => '',
         'middleware' => ['web'],

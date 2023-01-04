@@ -1,4 +1,4 @@
-@extends('saphir::auth-layout')
+@extends('saphir::layout')
 
 @section('content')
     <div class="container">

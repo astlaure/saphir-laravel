@@ -38,6 +38,7 @@ class SaphirServiceProvider extends ServiceProvider {
 
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
+        $this->loadRoutesFrom(__DIR__.'/../routes/admin.php');
         $this->loadRoutesFrom(__DIR__.'/../routes/auth.php');
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'saphir');
