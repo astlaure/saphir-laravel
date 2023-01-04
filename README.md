@@ -12,6 +12,24 @@
 
 `php artisan vendor:publish --provider="Astlaure\Saphir\SaphirServiceProvider" --tag="config"`
 
+### Views
+
+`php artisan vendor:publish --provider="Astlaure\Saphir\SaphirServiceProvider" --tag="views"`
+
+### Assets
+
+`php artisan vendor:publish --provider="Astlaure\Saphir\SaphirServiceProvider" --tag="assets"`
+
+**Add --force to overwrite**
+
+### Lang files (automatic)
+
+`php artisan vendor:publish --provider="Astlaure\Saphir\SaphirServiceProvider" --tag="laravel-assets"`
+
+### Symlink on windows (dev only)
+
+`mklink /J .\public\vendor\saphir .\vendor\astlaure\saphir\public`
+
 ## Add I18n
 
 In your router file

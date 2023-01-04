@@ -21,7 +21,23 @@ class SaphirServiceProvider extends ServiceProvider {
             $this->publishes([
                 __DIR__.'/../config/config.php' => config_path('saphir.php'),
             ], 'config');
+
+            $this->publishes([
+                __DIR__.'/../resources/views' => resource_path('views/vendor/saphir'),
+            ], 'views');
+
+            $this->publishes([
+                __DIR__.'/../public' => public_path('vendor/saphir'),
+            ], 'assets');
+
+            $this->publishes([
+                __DIR__.'/../lang' => lang_path(),
+            ], 'laravel-assets');
         }
+
+        $this->loadRoutesFrom(__DIR__.'/../routes/auth.php');
+
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'saphir');
 
         $router = $this->app->make(Router::class);
         $router->aliasMiddleware('locale', I18nLocale::class);
