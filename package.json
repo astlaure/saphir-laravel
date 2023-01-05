@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "sanitize.css": "^13.0.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {

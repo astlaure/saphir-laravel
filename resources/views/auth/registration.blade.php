@@ -2,32 +2,34 @@
 
 @section('content')
     <div class="container">
-        <div class="card">
+        <div class="card mw-3 mx-auto mt-9">
             <div class="card-body">
-                @if(session('status'))<p>{{ session('status') }}</p>@endif
-                @error('email')<div class="alert alert-danger">{{ $message }}</div>@enderror
+                <h3 class="uppercase text-center">Registration</h3>
+
+                @if(session('status'))<div class="alert success">{{ session('status') }}</div>@endif
+                @error('email')<div class="alert danger">{{ $message }}</div>@enderror
 
                 <form action="{{route('registration.post')}}" method="post">
                     @csrf
-                    <div class="mb-4">
+                    <div class="mb-6">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control" name="name" id="name" value="{{old('name')}}">
                     </div>
-                    <div class="mb-4">
+                    <div class="mb-6">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control" name="email" id="email" value="{{old('email')}}">
                     </div>
-                    <div class="mb-4">
+                    <div class="mb-6">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" name="password" id="password">
                     </div>
-                    <div class="mb-4">
+                    <div class="mb-6">
                         <label for="password_confirmation" class="form-label">Password Confirmation</label>
                         <input type="password" class="form-control" name="password_confirmation" id="password_confirmation">
                     </div>
-                    <div class="d-flex align-items-center justify-content-end">
-                        <a href="{{route('login')}}">Back to login</a>
-                        <button type="submit" class="btn btn-primary">Register</button>
+                    <div class="d-flex justify-end">
+                        <a href="{{route('login')}}" class="button link">Back to login</a>
+                        <button type="submit" class="button primary">Register</button>
                     </div>
                 </form>
             </div>

@@ -12,8 +12,10 @@ I18n::registerRoutes(function () {
     ];
 
     Route::group($configuration, function () {
-        Route::get('/{slug}', [AdminController::class, 'dashboard'])
-            ->where('slug', '.*')
+        Route::get('/', [AdminController::class, 'index'])
             ->name('saphir.dashboard');
+
+        Route::get('/{slug}', [AdminController::class, 'index'])
+            ->where('slug', '.*');
     });
 });

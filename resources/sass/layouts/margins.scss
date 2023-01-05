@@ -1,0 +1,22 @@
+@for $i from 1 through 9 {
+    .mt-#{$i} {
+        margin-top: var(--size-#{$i});
+    }
+
+    .mb-#{$i} {
+        margin-bottom: var(--size-#{$i});
+    }
+
+    .ml-#{$i} {
+        margin-left: var(--size-#{$i});
+    }
+
+    .mr-#{$i} {
+        margin-right: var(--size-#{$i});
+    }
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}

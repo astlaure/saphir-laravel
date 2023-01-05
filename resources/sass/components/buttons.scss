@@ -1,0 +1,25 @@
+.button {
+    padding: var(--size-1) var(--size-6);
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &.primary {
+        background: var(--color-indigo-500);
+        border: var(--color-indigo-600);
+        color: white;
+    }
+
+    &.secondary {
+        background: transparent;
+        color: var(--color-indigo-500);
+        border: var(--color-indigo-500);
+    }
+
+    &.link {
+        border: none;
+        background: transparent;
+        color: var(--color-indigo-500);
+        text-decoration: underline;
+    }
+}

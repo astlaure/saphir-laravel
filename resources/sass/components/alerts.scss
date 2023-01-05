@@ -1,0 +1,17 @@
+.alert {
+    width: 100%;
+    text-align: center;
+    padding: var(--size-2);
+    margin-bottom: var(--size-6);
+    border-radius: 5px;
+
+    &.success {
+        background: var(--color-green-100);
+        color: var(--color-green-500);
+    }
+
+    &.danger {
+        background: var(--color-red-100);
+        color: var(--color-red-500);
+    }
+}
