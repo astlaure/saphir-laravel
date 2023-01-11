@@ -29,3 +29,15 @@
 ### Symlink on windows (dev only)
 
 `mklink /J .\public\vendor\saphir .\vendor\astlaure\saphir\public`
+
+
+## Add fields to user
+
+maybe I should create another entity and make a relation instead ??
+
+## Librairies
+
+1. Cropper.js (react-cropper)
+2. Dropzone.js (react-dropzone)
+3. TinyMCE
+4. Charts.js

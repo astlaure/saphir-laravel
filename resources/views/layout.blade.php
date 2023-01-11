@@ -7,7 +7,7 @@
     <title>Saphir</title>
     <link rel="stylesheet" href="{{mix('css/auth.css', 'vendor/saphir')}}">
 </head>
-<body>
+<body class="bg-light">
 
 @yield('content')
 

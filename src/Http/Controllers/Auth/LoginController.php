@@ -6,6 +6,7 @@ use Astlaure\Saphir\Http\Controllers\Controller;
 use Astlaure\Saphir\Http\Requests\Auth\LoginRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class LoginController extends Controller
 {
@@ -32,6 +33,13 @@ class LoginController extends Controller
 
         $request->session()->regenerate();
         $request->session()->regenerateToken();
+
+        // not working with axios $request->ajax() || $request->isXmlHttpRequest()
+        if ($request->isJson()) {
+            return response()->json([
+                'redirect' => route('index'),
+            ]);
+        }
 
         return redirect()->route('index');
     }

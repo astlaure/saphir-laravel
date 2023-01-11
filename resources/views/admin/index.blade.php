@@ -6,8 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Saphir Admin</title>
     <link rel="stylesheet" href="{{mix('css/admin.css', 'vendor/saphir')}}">
+    <script>
+        window.saphir = {
+            basename: '{{config('saphir.admin.prefix')}}',
+            api: '{{config('saphir.api.prefix')}}',
+            locale: '{{app()->getLocale()}}',
+        };
+    </script>
 </head>
-<body>
+<body class="bg-light">
 
 <div id="root"></div>
 
