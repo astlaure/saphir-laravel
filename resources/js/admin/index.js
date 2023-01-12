@@ -1,12 +1,11 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
 import axios from 'axios';
+import { createApp } from 'vue';
+import App from './App.vue';
+import { router } from './router';
 
 axios.defaults.baseURL = window.saphir.api;
 
-const root = createRoot(
-    document.getElementById('root')
-);
+const app = createApp(App);
 
-root.render(<App/>);
+app.use(router);
+app.mount('#root');
