@@ -2,8 +2,11 @@ import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import LogoutForm from './LogoutForm';
 import NotificationCenter from './NotificationCenter';
+import { useTranslation } from 'react-i18next';
 
 export default function Layout() {
+    const { t } = useTranslation();
+
     return (
         <>
             <NotificationCenter />
@@ -12,13 +15,13 @@ export default function Layout() {
                 <hr className="border-white"/>
                 <ul className="nav flex-column">
                     <li className="nav-item">
-                        <Link to="/" className="nav-link text-white">Dashboard</Link>
+                        <Link to="/" className="nav-link text-white text-capitalize">{t('dashboard')}</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/users" className="nav-link text-white">Users</Link>
+                        <Link to="/users" className="nav-link text-white text-capitalize">{t('users')}</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/users" className="nav-link text-white">Documents</Link>
+                        <Link to="/users" className="nav-link text-white text-capitalize">{t('documents')}</Link>
                     </li>
                 </ul>
                 <ul className="nav flex-column mt-auto">

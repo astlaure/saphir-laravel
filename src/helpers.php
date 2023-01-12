@@ -17,6 +17,16 @@ if (!function_exists('locale_url')) {
     }
 }
 
+if (!function_exists('locale_path')) {
+    function locale_path($path): string {
+        if (app()->getLocale() === config('saphir.i18n.default')) {
+            return $path;
+        }
+
+        return '/' . app()->getLocale() . $path;
+    }
+}
+
 if (!function_exists('locale_route')) {
     /**
      * Generate the URL to a named route.

@@ -15,6 +15,8 @@ I18n::registerRoutes(function () {
         Route::get('/', [AdminController::class, 'index'])
             ->name('saphir.dashboard');
 
+        Route::get('/locales', [AdminController::class, 'locales']);
+
         Route::get('/{slug}', [AdminController::class, 'index'])
             ->where('slug', '.*');
     });

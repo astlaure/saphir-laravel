@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="{{mix('css/admin.css', 'vendor/saphir')}}">
     <script>
         window.saphir = {
-            basename: '{{config('saphir.admin.prefix')}}',
+            basename: '{{locale_path(config('saphir.admin.prefix'))}}',
             api: '{{config('saphir.api.prefix')}}',
-            locale: '{{app()->getLocale()}}',
         };
     </script>
 </head>

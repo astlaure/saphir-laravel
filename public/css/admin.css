@@ -14770,3 +14770,10 @@ textarea.form-control-lg {
   width: 24em;
   padding: 1rem;
 }
+
+.text-capitalize-first {
+  text-transform: lowercase;
+}
+.text-capitalize-first::first-letter {
+  text-transform: capitalize;
+}

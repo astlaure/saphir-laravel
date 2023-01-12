@@ -1,0 +1,7 @@
+.text-capitalize-first {
+    text-transform: lowercase;
+
+    &::first-letter {
+        text-transform: capitalize;
+    }
+}

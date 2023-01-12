@@ -10,4 +10,8 @@ class AdminController extends Controller
     public function index() {
         return view('saphir::admin.index');
     }
+
+    public function locales() {
+        return response()->json(__('saphir'));
+    }
 }
